@@ -90,3 +90,49 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .faq-answer>div{padding-right:56px}
   .footer{padding-bottom:88px}
 }
+
+/* Content structure additions, using the established Better Man visual system. */
+.product-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:25px 0 30px;border-block:1px solid var(--brand-border)}
+.product-specs>div{padding:18px 15px;border-right:1px solid var(--brand-border);display:flex;flex-direction:column;gap:5px}
+.product-specs>div:first-child{padding-left:0}.product-specs>div:last-child{border-right:0}
+.product-specs strong{font-size:31px;line-height:1;color:var(--brand-blue);letter-spacing:-.05em}.product-specs span{font-size:11px;color:#536277}
+.suitable-section{background:#fff}.suitable-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--brand-border);border-left:1px solid var(--brand-border)}
+.suitable-card{min-height:245px;padding:30px;border-right:1px solid var(--brand-border);border-bottom:1px solid var(--brand-border)}
+.suitable-card>span{display:block;color:var(--brand-blue);font-size:11px;font-weight:800;letter-spacing:.16em;margin-bottom:42px}
+.suitable-card h3{font-size:21px;line-height:1.4;margin:0 0 14px;color:var(--brand-black)}
+.suitable-card p{font-size:14px;line-height:1.8;margin:0;color:#536277}
+.state-factors-section{background:var(--brand-grey-light)}.state-factors-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(45px,8vw,110px);align-items:start}
+.state-factors-close{font-size:17px;line-height:1.8;font-weight:700;color:var(--brand-blue-dark);padding-left:18px;border-left:3px solid var(--brand-blue);max-width:520px}
+.state-factor-list{border-top:1px solid var(--brand-border)}.state-factor-list article{display:grid;grid-template-columns:55px 1fr;gap:15px;padding:25px 0;border-bottom:1px solid var(--brand-border)}
+.state-factor-list article>span{color:var(--brand-blue);font-size:11px;font-weight:800;letter-spacing:.12em;padding-top:4px}.state-factor-list h3{font-size:21px;margin:0 0 8px}.state-factor-list p{font-size:14px;line-height:1.75;color:#536277;margin:0}
+.why-reason{min-height:330px}.why-reason-copy{margin-top:75px}.why-reason h3{font-size:clamp(28px,3vw,42px)}
+.late-conversion{background:#fff}.late-conversion-inner{border-top:1px solid var(--brand-border);border-bottom:1px solid var(--brand-border);padding-top:64px;padding-bottom:64px;display:grid;grid-template-columns:1fr .9fr;gap:clamp(45px,8vw,110px)}
+.late-conversion h2{font-size:clamp(36px,4.3vw,60px);line-height:1.2;letter-spacing:-.055em;margin:0}.late-conversion-inner>div:last-child{padding-top:38px}
+.late-conversion-inner>div:last-child>p{font-size:15px;line-height:1.9;color:#536277;margin:0 0 20px}.late-conversion-inner>div:last-child>strong{display:block;font-size:18px;line-height:1.7;color:var(--brand-blue-dark);margin-bottom:26px}
+@media(max-width:900px){.suitable-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.state-factors-layout{grid-template-columns:1fr;gap:40px}.late-conversion-inner{grid-template-columns:1fr;gap:12px}.late-conversion-inner>div:last-child{padding-top:12px}}
+
+/* Mobile reading scale: larger body copy, stronger contrast, and single-column cards. */
+@media(max-width:650px){
+  .hero-desc,.section-desc,.problem-card p,.benefit-item p,.suitable-card p,.state-factor-list p,.age-card p,.how-to-use-heading>p,.use-points strong,.use-points p,.reviews-heading p,.review-conversion>div:last-child>p,.why-heading>div:last-child>p,.why-reason-copy>div,.ingredient-story-description,.faq-answer p,.final-cta p:not(.eyebrow),.late-conversion-inner>div:last-child>p{font-size:17px;line-height:1.7;color:#4b5a6d}
+  .problem-grid,.benefit-grid,.suitable-grid{grid-template-columns:1fr}
+  .problem-card h3,.benefit-item h3,.suitable-card h3,.state-factor-list h3{font-size:20px;line-height:1.45}
+  .problem-card,.suitable-card{min-height:0;padding:25px 22px}.suitable-card>span{margin-bottom:24px}
+  .benefit-item{min-height:0;padding:22px 8px;gap:15px}.benefit-item p{margin-top:5px}
+  .product-specs{margin:22px 0 27px}.product-specs>div{padding:15px 9px}.product-specs strong{font-size:27px}.product-specs span{font-size:12px;line-height:1.45}
+  .state-factors-close{font-size:17px;line-height:1.7}.state-factor-list article{grid-template-columns:36px 1fr;padding:23px 0;gap:7px}
+  .ingredient-story-highlight{font-size:17px;line-height:1.65}.ingredient-tags span{font-size:13px}.ingredient-story-description{margin-top:12px}
+  .use-points h3{font-size:21px}.reviews-heading p,.review-conversion>div:last-child>p,.why-heading>div:last-child>p,.why-reason-copy>div{font-size:17px}
+  .why-reason{min-height:0;padding:29px 24px 32px}.why-reason-copy{margin-top:60px}.why-reason-copy>p{font-size:11px}.why-reason h3{font-size:29px}
+  .faq-list summary strong{font-size:17px;line-height:1.5}.faq-answer p{font-size:16px;line-height:1.7}.faq-answer-link,.faq-answer-button{font-size:14px}
+  .late-conversion{padding-block:60px}.late-conversion-inner{padding:45px 0}.late-conversion h2{font-size:34px}.late-conversion-inner>div:last-child>strong{font-size:18px;line-height:1.65}
+}
+
+/* Final mobile readability overrides; kept last so component-specific rules cannot reduce body copy. */
+@media(max-width:650px){
+  body .hero-desc,body .section-desc,body .problem-card p,body .benefit-item p,body .suitable-card p,body .state-factor-list p,body .age-card p,body .how-to-use-heading>p,body .use-points strong,body .use-points p,body .reviews-heading p,body .review-conversion>div:last-child>p,body .why-heading>div:last-child>p,body .why-reason-copy>div,body .ingredient-story-description,body .final-cta p:not(.eyebrow),body .late-conversion-inner>div:last-child>p{font-size:17px;line-height:1.7;color:#4b5a6d}
+  body .problem-card h3,body .benefit-item h3,body .suitable-card h3,body .state-factor-list h3,body .use-points h3{font-size:20px;line-height:1.45}
+  body .ingredient-story-highlight{font-size:17px;line-height:1.65}
+  body .faq-list summary strong{font-size:17px;line-height:1.5}
+  body .faq-answer p{font-size:16px;line-height:1.7;color:#4b5a6d}
+  body .faq-answer-link,body .faq-answer-button{font-size:14px}
+}
