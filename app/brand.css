@@ -425,6 +425,7 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
 .support-section .support-item h3{font-size:23px;margin:0 0 7px;color:var(--brand-blue-dark)}
 .support-section .support-item p{font-size:15px;line-height:1.65;margin:0;color:#4d5c70}
 .support-callout{margin:30px 0 0;padding:22px 26px;border-left:4px solid var(--brand-blue);background:#edf4ff;color:var(--brand-blue-dark);font-size:24px;font-weight:750;line-height:1.45}
+.footer-bottom{justify-content:flex-end}
 
 .ingredient-core-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .ingredient-core-card{overflow:hidden;border:1px solid var(--brand-border);border-radius:12px;background:#fff}
@@ -601,4 +602,22 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .ingredient-support-card strong,
   .review-simple-cta small,
   .final-slogan{font-weight:700}
+}
+
+/* Final mobile contrast and weight pass; headings keep their established scale. */
+@media(max-width:650px){
+  .section-desc{font-size:19px!important;font-weight:700!important;line-height:1.6!important;color:#263b53!important}
+  #state .problem-card p,.support-section .support-item p{font-size:18px!important;font-weight:600;line-height:1.6;color:#293e56}
+  .ingredient-core-card .ingredient-story-description,
+  .ingredient-support-card p{font-size:18px!important;font-weight:600;line-height:1.62;color:#293e56}
+  .ingredient-story-highlight,.ingredient-support-card strong{font-weight:700;color:#15418a}
+  .how-to-kicker strong{font-size:18px!important;font-weight:700;color:#173b6d}
+  .use-points strong{font-size:18px!important;font-weight:650;line-height:1.6;color:#293e56}
+  .reviews-heading>div:first-child strong{font-size:18px;font-weight:700;color:#173b6d}
+  .customer-reviews .review-disclaimer{font-size:18px;font-weight:600;line-height:1.6;color:#334860}
+  .review-simple-cta small{font-size:18px;font-weight:700;color:#293e56}
+  .faq-list summary strong{font-size:19px!important;font-weight:750;line-height:1.5;color:#172b43}
+  .faq-answer p{font-size:18px!important;font-weight:600;line-height:1.62;color:#293e56}
+  .footer-main nav a{font-size:18px;font-weight:700;line-height:1.5;color:#d1dbea}
+  .footer-bottom{gap:0}
 }
