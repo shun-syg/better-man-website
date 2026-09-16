@@ -621,3 +621,14 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .footer-main nav a{font-size:18px;font-weight:700;line-height:1.5;color:#d1dbea}
   .footer-bottom{gap:0}
 }
+
+/* Requested ingredient stacking and quieter review disclaimer. */
+.customer-reviews .review-disclaimer{font-size:14px;font-weight:500;line-height:1.6;color:#64748a}
+@media(max-width:650px){
+  .ingredient-support-grid{grid-template-columns:1fr;gap:16px}
+  .ingredient-support-card{width:100%;height:auto}
+  .ingredient-support-image{aspect-ratio:3/2;height:auto;min-height:0}
+  .ingredient-support-card>div:last-child{padding:21px 20px 24px}
+  .ingredient-support-card .ingredient-tags{display:flex}
+  .customer-reviews .review-disclaimer{font-size:16px;font-weight:550;line-height:1.6;color:#526176}
+}
