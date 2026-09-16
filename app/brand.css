@@ -136,3 +136,47 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   body .faq-answer p{font-size:16px;line-height:1.7;color:#4b5a6d}
   body .faq-answer-link,body .faq-answer-button{font-size:14px}
 }
+
+/* Mobile-only content order and final reading scale. Desktop/tablet remain unchanged. */
+@media(max-width:650px){
+  main{display:flex;flex-direction:column}
+  main>.hero{order:0}
+  main>#state{order:1}
+  main>#benefits{order:2}
+  main>.suitable-section{order:3}
+  main>.state-factors-section{order:4}
+  main>#ingredients{order:5}
+  main>.age-grid,main>.section-cream{order:6}
+  main>#why-better-man{order:7}
+  main>.emotional-transition{order:8}
+  main>#how-to-use{order:9}
+  main>#reviews{order:10}
+  main>.late-conversion{order:11}
+  main>#faq{order:12}
+  main>.final-cta{order:13}
+
+  .container{width:calc(100% - 40px)}
+  .section{padding:60px 0}
+  .hero-grid{padding-top:38px}
+  .hero h1{font-size:clamp(38px,10.2vw,42px);line-height:1.2}
+  .section-heading h2,.how-to-use-heading h2,.reviews-heading h2,.why-heading h2,.late-conversion h2,.final-cta h2{font-size:clamp(34px,9.4vw,38px);line-height:1.23}
+  .problem-card h3,.benefit-item h3,.suitable-card h3,.state-factor-list h3,.ingredient-story-copy h3,.use-points h3,.age-card h3{font-size:22px;line-height:1.4}
+  .hero-desc,.section-desc,.state-factors-close,.how-to-use-heading>p,.reviews-heading p,.why-heading>div:last-child>p,.late-conversion-inner>div:last-child>p,.final-cta p:not(.eyebrow){font-size:18px;line-height:1.68}
+  .problem-card p,.benefit-item p,.suitable-card p,.state-factor-list p,.age-card p,.ingredient-story-description,.use-points strong,.use-points p,.review-conversion>div:last-child>p,.why-reason-copy>div,.faq-answer p{font-size:17px;line-height:1.68}
+  .eyebrow,.how-to-kicker span,.how-to-kicker strong,.reviews-heading>div:first-child span,.why-heading>div:first-child span,.ingredient-story-label,.ingredient-story-english,.dose-caption,.why-reason-copy>p,.late-conversion .eyebrow{font-size:14px;line-height:1.5;letter-spacing:.12em}
+  .button,.hero-actions .button,.why-statement .button,.faq-answer-button{font-size:16px;line-height:1.3;min-height:50px}
+  .hero-actions{flex-direction:column;align-items:stretch}.hero-actions .button{width:100%;justify-content:center;padding-inline:16px}
+  .problem-grid,.benefit-grid,.suitable-grid{grid-template-columns:1fr}
+  .problem-card,.suitable-card{padding:24px 21px}.benefit-item{padding:22px 8px}
+  .ingredient-story-copy{padding-inline:2px}.ingredient-story-highlight{font-size:18px;line-height:1.65}
+  .faq-list summary strong{font-size:18px;line-height:1.5}
+  .faq-answer p{font-size:17px}
+  .emotional-transition{padding:50px 0}
+  .floating-wa{right:14px;bottom:max(14px,env(safe-area-inset-bottom));min-height:48px;padding-inline:15px;font-size:15px}
+  .footer{padding-bottom:96px}
+}
+@media(max-width:650px){
+  body .problem-card h3,body .benefit-item h3,body .suitable-card h3,body .state-factor-list h3,body .ingredient-story-copy h3,body .use-points h3{font-size:22px;line-height:1.4}
+  .floating-wa{width:52px;height:52px;min-height:52px;padding:0;justify-content:center;border-radius:50%}
+  .floating-wa span{display:none}
+}
