@@ -187,3 +187,43 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .how-to-mobile-photo{display:block;width:100%;margin:25px 0 28px;overflow:hidden;border-radius:10px}
   .how-to-mobile-photo img{display:block;width:100%;height:auto;object-fit:contain}
 }
+
+/* WHY BETTER MAN: focused mobile value summary; desktop presentation remains unchanged. */
+.why-mobile-value{display:none}
+@media(max-width:650px){
+  #why-better-man .why-reasons{display:none}
+  .why-mobile-value{display:block}
+  .why-mobile-cards{border-top:1px solid var(--brand-border)}
+  .why-mobile-cards article{padding:27px 0 28px;border-bottom:1px solid var(--brand-border)}
+  .why-mobile-number{display:block;font-size:34px;font-weight:750;line-height:1;color:var(--brand-blue);letter-spacing:-.04em;margin-bottom:13px}
+  .why-mobile-cards small{display:block;font-size:14px;font-weight:800;line-height:1.5;letter-spacing:.12em;color:var(--brand-blue);margin-bottom:10px}
+  .why-mobile-cards h3{font-size:24px;line-height:1.4;color:var(--brand-black);margin:0 0 9px}
+  .why-mobile-cards p{font-size:17px;line-height:1.68;color:#4b5a6d;margin:0}
+  .why-mobile-cta{margin-top:34px;padding:30px 22px;background:#fff;border:1px solid var(--brand-border);border-top:3px solid var(--brand-blue);border-radius:8px}
+  .why-mobile-cta h3{font-size:27px;line-height:1.42;letter-spacing:-.035em;color:var(--brand-blue-dark);margin:0 0 14px}
+  .why-mobile-cta p{font-size:17px;line-height:1.68;color:#4b5a6d;margin:0 0 22px}
+  .why-mobile-cta .button{width:100%;justify-content:center;padding-inline:13px}
+}
+
+/* REAL CUSTOMER FEEDBACK: mobile-only trust journey; desktop gallery stays unchanged. */
+.mobile-review-subhead,.review-conversion-mobile{display:none}
+@media(max-width:650px){
+  #reviews .container{width:calc(100% - 40px)}
+  .customer-reviews .mixed-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}
+  .mobile-review-subhead{display:block;grid-column:1/-1;padding-top:16px}
+  .mobile-review-subhead span{display:block;font-size:14px;font-weight:800;line-height:1.5;letter-spacing:.12em;color:var(--brand-blue);margin-bottom:7px}
+  .mobile-review-subhead h3{font-size:24px;line-height:1.4;color:var(--brand-blue-dark);margin:0}
+  .mobile-video-subhead{order:1}.mobile-photo-subhead{order:4;margin-top:22px}
+  .customer-reviews .mixed-0{order:2}.customer-reviews .mixed-3{order:3}
+  .customer-reviews .mixed-1{order:5}.customer-reviews .mixed-2{order:6}.customer-reviews .mixed-4{order:7}.customer-reviews .mixed-5{order:8}
+  .customer-reviews .mixed-card,.customer-reviews .mixed-0,.customer-reviews .mixed-1,.customer-reviews .mixed-2,.customer-reviews .mixed-3,.customer-reviews .mixed-4,.customer-reviews .mixed-5{width:100%;min-width:0;grid-column:auto;grid-row:auto;border-radius:15px;border-color:#d7e0ec;box-shadow:0 4px 14px #102e5c12}
+  .customer-reviews .mixed-video{grid-column:1/-1;aspect-ratio:9/16}
+  .customer-reviews .mixed-photo{aspect-ratio:784/1100}
+  .customer-reviews .mixed-card>img{object-fit:contain}
+  .customer-reviews .mixed-video .mixed-label span{font-size:0}
+  .customer-reviews .mixed-video .mixed-label span::after{content:"▶  顾客真实分享";font-size:14px;font-weight:750;letter-spacing:.04em}
+  .customer-reviews .mixed-video .mixed-label svg{display:none}
+  .customer-reviews .mixed-video .play-circle{width:62px;height:62px}
+  .review-conversion-desktop{display:none}
+  .review-conversion-mobile{display:block}
+}
