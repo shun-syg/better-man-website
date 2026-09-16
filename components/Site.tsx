@@ -27,7 +27,7 @@ const suitableMen = [
   ["35岁以上开始关注保养的男性", "不一定要等到状态明显下降以后，才开始关注身体和日常状态。"],
   ["想做长期日常管理的人", "不想每次到了关键时刻才处理，而是希望平时就维持自己的整体状态。"],
 ] as const;
-function SuitableMen() { return <section className="section suitable-section"><div className="container"><SectionHeading eyebrow="03 / WHO IT IS FOR" title={<>哪些男性，<br/>适合 Better Man？</>} desc="当生活节奏、年龄和压力开始影响日常状态，就值得认真关注。"/><div className="lifestyle-slot lifestyle-slot-home" role="img" aria-label="预留图片：成熟亚洲男性下班回家在沙发休息的真实生活状态"><span>LIFESTYLE IMAGE / 03</span><strong>下班回家 · 压力与体力消耗</strong><small>成熟亚洲男性居家休息场景</small></div><div className="suitable-grid">{suitableMen.map(([title, description], index) => <article className="suitable-card" key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>; }
+function SuitableMen() { return <section className="section suitable-section"><div className="container"><div className="lifestyle-feature-head"><SectionHeading eyebrow="03 / WHO IT IS FOR" title={<>哪些男性，<br/>适合 Better Man？</>} desc="当生活节奏、年龄和压力开始影响日常状态，就值得认真关注。"/><div className="lifestyle-real-image"><Image src="/images/lifestyle/daily-support.png" alt="在办公环境展示 Better Man 产品的成熟男性" width={1536} height={1024} loading="lazy" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) calc(100vw - 52px), 55vw"/></div></div><div className="suitable-grid">{suitableMen.map(([title, description], index) => <article className="suitable-card" key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>; }
 
 const stateFactors = [
   ["年龄变化", "随着年龄增长，体力和恢复状态可能发生变化。"],
