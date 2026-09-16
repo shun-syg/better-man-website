@@ -424,6 +424,7 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
 .support-section .support-item>small{position:absolute;right:18px;top:16px;font-size:10px;font-weight:800;letter-spacing:.14em;color:#91a2ba}
 .support-section .support-item h3{font-size:23px;margin:0 0 7px;color:var(--brand-blue-dark)}
 .support-section .support-item p{font-size:15px;line-height:1.65;margin:0;color:#4d5c70}
+.support-callout{margin:30px 0 0;padding:22px 26px;border-left:4px solid var(--brand-blue);background:#edf4ff;color:var(--brand-blue-dark);font-size:24px;font-weight:750;line-height:1.45}
 
 .ingredient-core-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .ingredient-core-card{overflow:hidden;border:1px solid var(--brand-border);border-radius:12px;background:#fff}
@@ -456,6 +457,7 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
 @media(max-width:900px){
   .support-visual-head{grid-template-columns:1fr;gap:28px}
   .support-section .support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .support-section .support-grid .support-item:last-child{grid-column:auto}
   .ingredient-support-card{grid-template-columns:130px 1fr}
   .ingredient-support-image{min-height:230px}
   .review-photo-track{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -567,4 +569,36 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .footer-main nav a{font-size:17px;font-weight:600;line-height:1.5}
   .footer-bottom p,.footer-bottom span{font-size:17px;font-weight:500;line-height:1.6;color:#c4d0e1}
   .mobile-nav>a{font-size:18px;font-weight:650}
+}
+
+/* Final mobile readability and conversational 01/02 copy. */
+@media(max-width:650px){
+  .hero-value{font-size:19px!important;font-weight:650;line-height:1.65;color:#2f4259}
+  .hero-primary-action small{font-size:18px;font-weight:700;line-height:1.55;color:#263b53;margin-top:2px}
+
+  .section-desc{font-size:19px!important;font-weight:650!important;line-height:1.62!important;color:#2f4259!important}
+  #state .problem-card h3,.support-section .support-item h3{font-size:21px!important;font-weight:700;line-height:1.35}
+  #state .problem-card p,.support-section .support-item p{font-size:17px!important;font-weight:600;line-height:1.6;color:#2f4259}
+  #state .problem-card,.support-section .support-item{height:auto;min-height:0}
+  .problem-statement{font-size:20px!important;font-weight:700;line-height:1.55;color:#1f3f6b;padding-left:16px}
+
+  .support-section .support-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+  .support-section .support-grid .support-item:last-child{grid-column:auto}
+  .support-section .support-item{display:flex;flex-direction:column;padding:17px 14px 19px}
+  .support-section .support-icon{flex:0 0 auto}
+  .support-section .support-item>div{min-width:0}
+  .support-callout{margin-top:24px;padding:19px 18px;font-size:20px;font-weight:700;line-height:1.55}
+
+  .ingredient-core-card .ingredient-story-description,
+  .ingredient-support-card p,
+  .use-points strong,
+  .customer-reviews .review-disclaimer,
+  .faq-answer p,
+  .final-cta p:not(.eyebrow),
+  .footer-bottom p,
+  .footer-bottom span{font-weight:600}
+  .ingredient-core-card .ingredient-story-highlight,
+  .ingredient-support-card strong,
+  .review-simple-cta small,
+  .final-slogan{font-weight:700}
 }
