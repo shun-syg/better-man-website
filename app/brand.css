@@ -412,3 +412,107 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .review-simple-cta .button{width:100%}
   .faq-layout{gap:28px}
 }
+
+/* Mobile-first UX consolidation: Hero + 01–05 + FAQ. */
+.support-visual-head{display:grid;grid-template-columns:minmax(0,.78fr) minmax(420px,1.22fr);gap:clamp(36px,6vw,82px);align-items:center;margin-bottom:38px}
+.support-visual-head .section-heading{margin-bottom:0}
+.support-person-image{overflow:hidden;border:1px solid var(--brand-border);border-radius:12px;background:var(--brand-grey-light)}
+.support-person-image img{display:block;width:100%;height:auto;object-fit:contain}
+.support-section .support-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.support-section .support-item{position:relative;display:grid;grid-template-columns:54px 1fr;gap:13px 17px;min-height:170px;padding:24px;border:1px solid var(--brand-border);border-radius:12px;background:#fff}
+.support-section .support-icon{grid-row:1/3;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--brand-blue-light);color:var(--brand-blue)}
+.support-section .support-item>small{position:absolute;right:18px;top:16px;font-size:10px;font-weight:800;letter-spacing:.14em;color:#91a2ba}
+.support-section .support-item h3{font-size:23px;margin:0 0 7px;color:var(--brand-blue-dark)}
+.support-section .support-item p{font-size:15px;line-height:1.65;margin:0;color:#4d5c70}
+
+.ingredient-core-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.ingredient-core-card{overflow:hidden;border:1px solid var(--brand-border);border-radius:12px;background:#fff}
+.ingredient-core-card .ingredient-story-image{height:auto;aspect-ratio:3/2;border-radius:0}
+.ingredient-core-card .ingredient-story-copy{padding:28px 30px 31px}
+.ingredient-support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.ingredient-support-card{display:grid;grid-template-columns:minmax(150px,.65fr) minmax(0,1.35fr);overflow:hidden;border:1px solid var(--brand-border);border-radius:12px;background:#fff}
+.ingredient-support-image{min-height:250px;background:var(--brand-blue-dark)}
+.ingredient-support-image img{display:block;width:100%;height:100%;object-fit:cover}
+.ingredient-support-card>div:last-child{padding:24px}
+.ingredient-support-card>div>span{display:block;font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--brand-blue);margin-bottom:7px}
+.ingredient-support-card small{display:block;font-size:11px;letter-spacing:.14em;color:#78879a;margin-bottom:7px}
+.ingredient-support-card h3{font-size:28px;margin:0 0 8px;color:var(--brand-black)}
+.ingredient-support-card strong{display:block;font-size:14px;line-height:1.55;color:var(--brand-blue);margin-bottom:9px}
+.ingredient-support-card p{font-size:14px;line-height:1.7;color:#536277;margin:0 0 14px}
+
+.review-group{margin-top:28px}.review-group+.review-group{margin-top:42px}
+.review-group .mobile-review-subhead{display:block;padding:0 0 15px}
+.review-group .mobile-review-subhead span{display:block;font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--brand-blue);margin-bottom:7px}
+.review-group .mobile-review-subhead h3{font-size:27px;line-height:1.35;color:var(--brand-blue-dark);margin:0}
+.review-track{display:grid;gap:14px}
+.review-video-track{grid-template-columns:repeat(2,minmax(0,1fr))}
+.review-photo-track{grid-template-columns:repeat(4,minmax(0,1fr))}
+.review-track .mixed-card{position:relative;width:100%;min-width:0;overflow:hidden;border:1px solid #d4deec;border-radius:12px;background:#071a35;padding:0;box-shadow:0 5px 20px #102e5c12}
+.review-video-track .mixed-card{aspect-ratio:9/16}.review-photo-track .mixed-card{aspect-ratio:784/1100}
+.review-track .mixed-card>img,.review-track .mixed-card>video{display:block;width:100%;height:100%;object-fit:contain;background:#071a35}
+.review-track .mixed-video>video{object-fit:cover}
+.review-track .play-circle{width:58px;height:58px;border-radius:50%;background:#fff;color:var(--brand-blue);display:flex;align-items:center;justify-content:center;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 8px 25px #0005}
+
+@media(max-width:900px){
+  .support-visual-head{grid-template-columns:1fr;gap:28px}
+  .support-section .support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ingredient-support-card{grid-template-columns:130px 1fr}
+  .ingredient-support-image{min-height:230px}
+  .review-photo-track{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .section{padding:54px 0}
+  .section-heading h2,.how-to-use-heading h2,.reviews-heading h2,.final-cta h2{font-size:clamp(32px,8.7vw,37px);line-height:1.24}
+  .section-desc,.hero-value,.final-cta p:not(.eyebrow){font-size:18px!important;font-weight:500;line-height:1.62;color:#3f4f63}
+  .support-visual-head{display:block;margin-bottom:25px}
+  .support-visual-head .section-heading{margin-bottom:23px}
+  .support-person-image{border-radius:10px}
+  .support-person-image img{height:235px;object-fit:cover;object-position:center}
+  #state .lifestyle-real-image img{height:220px;object-fit:cover;object-position:center}
+  #state .problem-grid,.support-section .support-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  #state .problem-card{padding:16px 14px 17px;border-radius:11px}
+  #state .card-top{margin-bottom:13px}
+  #state .problem-card h3,.support-section .support-item h3{font-size:20px!important;font-weight:700;line-height:1.35;margin-bottom:6px}
+  #state .problem-card p,.support-section .support-item p{font-size:17px!important;font-weight:500;line-height:1.55;color:#435267}
+  .problem-statement{font-size:18px;line-height:1.6;margin-top:24px}
+  .support-section .support-item{display:block;min-height:0;padding:17px 14px 18px;text-align:left}
+  .support-section .support-icon{width:45px;height:45px;margin-bottom:14px}
+  .support-section .support-item>small{top:16px;right:13px;font-size:9px}
+  .ingredient-core-grid{grid-template-columns:1fr;gap:16px}
+  .ingredient-core-card .ingredient-story-copy{padding:22px 20px 24px}
+  .ingredient-core-card .ingredient-story-label{margin-bottom:15px}
+  .ingredient-core-card .ingredient-story-copy h3{font-size:30px!important;margin-bottom:9px}
+  .ingredient-core-card .ingredient-story-highlight{font-size:17px;margin-bottom:9px}
+  .ingredient-core-card .ingredient-story-description{font-size:17px!important;font-weight:500;line-height:1.62}
+  .ingredient-support-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+  .ingredient-support-card{display:block;border-radius:11px}
+  .ingredient-support-image{min-height:0;aspect-ratio:1}
+  .ingredient-support-card>div:last-child{padding:16px 13px 17px}
+  .ingredient-support-card>div>span{font-size:9px;line-height:1.45}
+  .ingredient-support-card small{font-size:10px}
+  .ingredient-support-card h3{font-size:22px;line-height:1.3}
+  .ingredient-support-card strong{font-size:15px;line-height:1.5}
+  .ingredient-support-card p{font-size:16px;font-weight:500;line-height:1.6}
+  .ingredient-support-card .ingredient-tags{display:none}
+  .how-to-use-compact .how-to-main{margin-top:24px;padding:12px;gap:20px}
+  .how-to-use-compact .dose-visual{min-height:270px;padding:45px 20px 20px}
+  .how-to-use-compact .dose-step>strong{font-size:64px}
+  .how-to-use-compact .dose-step b{font-size:15px}
+  .how-to-use-compact .dose-arrow{margin:10px 0}
+  .how-to-mobile-photo{margin:21px 0 23px}
+  .use-points article{padding:18px 3px}
+  .use-points h3{font-size:21px!important}.use-points strong{font-size:17px!important;line-height:1.6}
+  .reviews-heading{margin-bottom:15px}
+  .review-group{margin-top:20px}.review-group+.review-group{margin-top:31px}
+  .review-group .mobile-review-subhead{padding-bottom:12px}
+  .review-group .mobile-review-subhead span{font-size:13px}
+  .review-group .mobile-review-subhead h3{font-size:23px}
+  .review-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:1px 2px 12px;scrollbar-width:none}
+  .review-track::-webkit-scrollbar{display:none}
+  .review-track .mixed-card{flex:0 0 78%;scroll-snap-align:start;border-radius:14px}
+  .review-photo-track .mixed-card{flex-basis:76%}
+  .faq-list summary{padding:20px 0}
+  .faq-list summary strong{font-size:18px!important;font-weight:650;line-height:1.45}
+  .faq-answer p{font-size:17px!important;font-weight:500;line-height:1.62;color:#435267}
+  .final-inner .button{width:100%;justify-content:center;min-height:54px;font-size:17px}
+}
