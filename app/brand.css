@@ -180,3 +180,10 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .floating-wa{width:52px;height:52px;min-height:52px;padding:0;justify-content:center;border-radius:50%}
   .floating-wa span{display:none}
 }
+
+/* HOW TO USE: supplied lifestyle image is intentionally mobile-only. */
+.how-to-mobile-photo{display:none}
+@media(max-width:650px){
+  .how-to-mobile-photo{display:block;width:100%;margin:25px 0 28px;overflow:hidden;border-radius:10px}
+  .how-to-mobile-photo img{display:block;width:100%;height:auto;object-fit:contain}
+}
