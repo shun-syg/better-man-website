@@ -312,3 +312,37 @@ body{font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:#ff
   .hero-bottom{margin-top:0}
 }
 @media(min-width:901px){.hero-art{transform:none}}
+
+/* Responsive lifestyle image slots for real scene photography to be supplied. */
+.lifestyle-slot{position:relative;isolation:isolate;min-height:360px;margin:38px 0 42px;padding:30px;overflow:hidden;border:1px solid #dbe4ef;border-radius:12px;background:#dfe8f4;display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+.lifestyle-slot::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(115deg,#0b234f 0%,#173d70 52%,#8da6c5 100%)}
+.lifestyle-slot::after{content:"";position:absolute;z-index:-1;width:38%;aspect-ratio:1;border-radius:50% 50% 42% 42%;right:12%;bottom:-17%;background:#d5e0ee22;border:1px solid #d9e7fa35}
+.lifestyle-slot>span{font-size:11px;font-weight:800;letter-spacing:.18em;color:#aecdf7;margin-bottom:10px}.lifestyle-slot>strong{font-size:27px;line-height:1.35;margin-bottom:7px}.lifestyle-slot>small{font-size:13px;line-height:1.5;color:#d2deef}
+.lifestyle-slot-home::before{background:linear-gradient(115deg,#102b54 0%,#31577f 55%,#a0b2c7 100%)}
+.lifestyle-age-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:38px 0 34px}
+.lifestyle-age-image{position:relative;min-height:280px;padding:23px;overflow:hidden;border:1px solid #dbe4ef;border-radius:11px;background:#102b54;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.lifestyle-age-image:nth-child(2){background:#1d4674}.lifestyle-age-image:nth-child(3){background:#3b5f83}
+.lifestyle-age-image::before{content:"";position:absolute;width:66%;aspect-ratio:1;border-radius:50%;right:-15%;top:12%;background:#ffffff10;border:1px solid #ffffff1c}
+.lifestyle-age-image span{position:relative;font-size:30px;font-weight:750;line-height:1.1}.lifestyle-age-image small{position:relative;font-size:10px;font-weight:800;letter-spacing:.16em;color:#bdd2ed;margin-top:7px}
+@media(max-width:900px){.lifestyle-slot{min-height:320px}.lifestyle-age-image{min-height:240px}}
+@media(max-width:650px){
+  .lifestyle-slot{min-height:280px;margin:27px 0 30px;padding:22px;border-radius:10px}
+  .lifestyle-slot>span{font-size:12px}.lifestyle-slot>strong{font-size:22px}.lifestyle-slot>small{font-size:13px}
+  .lifestyle-age-strip{grid-template-columns:1fr;gap:12px;margin:27px 0 28px}
+  .lifestyle-age-image{min-height:190px;padding:21px}
+}
+
+/* Shared responsive layout for the supplied lifestyle photography in 01 and 06. */
+.lifestyle-feature-head{display:grid;grid-template-columns:minmax(0,.82fr) minmax(420px,1.18fr);gap:clamp(38px,6vw,84px);align-items:center;margin-bottom:46px}
+.lifestyle-feature-head .section-heading{margin-bottom:0}
+.lifestyle-real-image{width:100%;overflow:hidden;border-radius:12px;border:1px solid var(--brand-border);background:var(--brand-grey-light)}
+.lifestyle-real-image img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:900px){
+  .lifestyle-feature-head{grid-template-columns:1fr;gap:28px;margin-bottom:38px}
+  .lifestyle-real-image{border-radius:11px}
+}
+@media(max-width:650px){
+  .lifestyle-feature-head{display:block;margin-bottom:30px}
+  .lifestyle-feature-head .section-heading{margin-bottom:25px}
+  .lifestyle-real-image{width:100%;border-radius:10px}
+}
