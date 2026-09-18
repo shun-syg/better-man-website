@@ -1,7 +1,7 @@
 export const siteConfig = {
   brandName: "Better Man",
-  whatsappNumber: "6590596258",
-  whatsappMessage: "你好，我想了解 Better Man 宝马糖的产品和目前配套。",
+  whatsappNumber: "6580575266",
+  whatsappMessage: "你好，我在 Better Man 官网看到产品，想了解一下效果和配套。",
 };
 
 export function whatsappHref() {
