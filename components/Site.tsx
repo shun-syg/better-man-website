@@ -6,9 +6,23 @@ import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, BatteryFull, Brain, Che
 import type { PhotoReview, VideoReview } from "@/data/reviews";
 import { whatsappHref } from "@/config/site";
 
+declare global {
+  interface Window {
+    gtag?: (command: "event", eventName: "conversion", parameters: { send_to: string }) => void;
+  }
+}
+
+function trackWhatsAppConversion() {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", "conversion", {
+      send_to: "AW-18459690544/wwSsCK34zv8cELCMouJE",
+    });
+  }
+}
+
 const nav = [ ["产品介绍", "#benefits"], ["核心成分", "#ingredients"], ["食用方式", "#how-to-use"], ["顾客反馈", "#reviews"], ["FAQ", "#faq"] ];
 function BrandLogo() { return <span className="brand-logo"><Image src="/brand/better-man-logo.png" alt="Better Man 官方 Logo" width={1391} height={970} priority /></span>; }
-function WaButton({ children = "WhatsApp 咨询", light = false, className = "" }: { children?: React.ReactNode; light?: boolean; className?: string }) { return <a className={`button button-whatsapp ${light ? "button-whatsapp-light" : ""} ${className}`} href={whatsappHref()} target="_blank" rel="noopener noreferrer" aria-label="通过 WhatsApp 咨询 Better Man"><MessageCircle size={18}/>{children}<ArrowUpRight size={17}/></a>; }
+function WaButton({ children = "WhatsApp 咨询", light = false, className = "" }: { children?: React.ReactNode; light?: boolean; className?: string }) { return <a className={`button button-whatsapp ${light ? "button-whatsapp-light" : ""} ${className}`} href={whatsappHref()} onClick={trackWhatsAppConversion} target="_blank" rel="noopener noreferrer" aria-label="通过 WhatsApp 咨询 Better Man"><MessageCircle size={18}/>{children}<ArrowUpRight size={17}/></a>; }
 function Eyebrow({ children }: { children: React.ReactNode }) { return <p className="eyebrow">{children}</p>; }
 function SectionHeading({ eyebrow, title, desc, center = false }: { eyebrow: string; title: React.ReactNode; desc?: React.ReactNode; center?: boolean }) { return <div className={`section-heading ${center ? "center" : ""}`}><Eyebrow>{eyebrow}</Eyebrow><h2>{title}</h2>{desc && <p className="section-desc">{desc}</p>}</div>; }
 function Header() { const [open, setOpen] = useState(false); return <header className="site-header"><div className="container header-inner"><a className="brand" href="#home" aria-label="Better Man 首页"><BrandLogo/></a><nav className="desktop-nav" aria-label="主导航">{nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</nav><WaButton className="header-cta">WhatsApp 咨询</WaButton><button className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "关闭菜单" : "打开菜单"}>{open ? <X/> : <Menu/>}</button></div>{open && <nav id="mobile-nav" className="mobile-nav" aria-label="移动导航"><a className="mobile-brand" href="#home" onClick={() => setOpen(false)}><BrandLogo/></a>{nav.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={16}/></a>)}<WaButton>WhatsApp 立即咨询</WaButton></nav>}</header>; }
@@ -88,10 +102,10 @@ const faqs = [
   { question: "Better Man 多少钱？", paragraphs: ["Better Man 不同地区及活动期间的配套可能有所不同。", "点击 WhatsApp 联系我们，即可查看目前最新配套与优惠。"], link: "查看目前优惠 →" },
   { question: "怎样下单？", paragraphs: ["点击网站任何一个绿色 WhatsApp 按钮，即可进入一对一咨询与下单。", "告诉我们你所在的地区，我们会提供目前可选择的配套、价格及下单方式。"], link: "WhatsApp 立即咨询 ↗", button: true },
 ];
-function FAQ() { return <section id="faq" className="section section-cream"><div className="container faq-layout"><div><SectionHeading eyebrow="FAQ" title="你可能还想了解" desc="有关 Better Man 的常见问题，都在这里。"/></div><div className="faq-list">{faqs.map((item,i) => <details key={item.question}><summary><span className="faq-number">{String(i+1).padStart(2,"0")}</span><strong>{item.question}</strong><ChevronDown size={20}/></summary><div className="faq-answer"><div>{item.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{item.link && <a className={item.button ? "faq-answer-button" : "faq-answer-link"} href={whatsappHref()} target="_blank" rel="noopener noreferrer">{item.link}</a>}</div></div></details>)}</div></div></section>; }
+function FAQ() { return <section id="faq" className="section section-cream"><div className="container faq-layout"><div><SectionHeading eyebrow="FAQ" title="你可能还想了解" desc="有关 Better Man 的常见问题，都在这里。"/></div><div className="faq-list">{faqs.map((item,i) => <details key={item.question}><summary><span className="faq-number">{String(i+1).padStart(2,"0")}</span><strong>{item.question}</strong><ChevronDown size={20}/></summary><div className="faq-answer"><div>{item.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{item.link && <a className={item.button ? "faq-answer-button" : "faq-answer-link"} href={whatsappHref()} onClick={trackWhatsAppConversion} target="_blank" rel="noopener noreferrer">{item.link}</a>}</div></div></details>)}</div></div></section>; }
 function FinalCTA() { return <section className="final-cta"><div className="container final-inner"><Eyebrow>BETTER MAN</Eyebrow><h2>不确定 Better Man<br/><em>适不适合你？</em></h2><p>直接 WhatsApp 问我们，不用自己猜。</p><WaButton light>WhatsApp 问一问</WaButton><div className="final-slogan">Better Man｜有心又有力，随时都 Ready。</div></div></section>; }
 function Footer() { return <footer className="footer"><div className="container"><div className="footer-main"><div><a className="brand footer-brand" href="#home" aria-label="Better Man 首页"><BrandLogo/></a></div><nav aria-label="页脚导航"><a href="#benefits">产品介绍</a><a href="#ingredients">核心成分</a><a href="#how-to-use">食用方式</a><a href="#reviews">顾客反馈</a><a href="#faq">FAQ</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms</a></nav></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Better Man. All rights reserved.</span></div></div></footer>; }
-function FloatingWhatsApp() { return <a className="floating-wa" href={whatsappHref()} target="_blank" rel="noopener noreferrer" aria-label="通过 WhatsApp 咨询 Better Man"><MessageCircle size={23} fill="currentColor"/><span>WhatsApp 咨询</span></a>; }
+function FloatingWhatsApp() { return <a className="floating-wa" href={whatsappHref()} onClick={trackWhatsAppConversion} target="_blank" rel="noopener noreferrer" aria-label="通过 WhatsApp 咨询 Better Man"><MessageCircle size={23} fill="currentColor"/><span>WhatsApp 咨询</span></a>; }
 export function Site({ photos, videos }: { productAvailable: boolean; photos: PhotoReview[]; videos: VideoReview[] }) { return <><Header/><main><Hero/><Problems/><Benefits/><Ingredients/><HowToUse/><CustomerReviews photos={photos} videos={videos}/><FAQ/><FinalCTA/></main><Footer/><FloatingWhatsApp/></>; }
 
 
