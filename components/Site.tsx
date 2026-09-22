@@ -33,7 +33,7 @@ const problems = [
   { icon: TrendingUp, title: "做到一半容易掉", desc: "刚开始明明还可以，做到一半却慢慢软下来，越急越不行。" },
   { icon: Brain, title: "精神越来越差", desc: "以前下班还有精神，现在工作一天回家，只想休息。" },
   { icon: BatteryFull, title: "体力明显跟不上", desc: "不是不想，是身体真的没有以前那么有力了。" },
-  { icon: Moon, title: "晚上一直夜尿", desc: "一个晚上起来几次，觉都睡不好，第二天整个人更累。" },
+  { icon: Moon, title: "恢复越来越慢", desc: "工作忙、休息少，身体和精神恢复没有以前那么快。" },
 ];
 function Problems() { return <section id="state" className="section section-cream"><div className="container"><div className="lifestyle-feature-head"><div><SectionHeading eyebrow="01 / KNOW YOUR STATE" title={<>这些情况，<br/>你有没有中几个？</>} desc={<>很多男人都是慢慢发现，<br/>自己真的没有以前那么好了。</>}/></div><div className="lifestyle-real-image"><Image src="/images/lifestyle/understand-your-state.png" alt="夜晚坐在床边疲惫思考的成年男性" width={1536} height={1024} loading="lazy" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) calc(100vw - 52px), 55vw"/></div></div><div className="problem-grid">{problems.map((item, i) => <article className="problem-card" key={item.title}><div className="card-top"><item.icon size={23} strokeWidth={1.6}/><span>0{i+1}</span></div><h3>{item.title}</h3><p>{item.desc}</p></article>)}</div><p className="problem-statement">如果中了几个，<br/>就别一直拖着不管。</p></div></section>; }
 const benefits = [
@@ -41,10 +41,10 @@ const benefits = [
   [TrendingUp, "耐久", "想撑久一点，不要才刚开始就结束。"],
   [Brain, "精神", "白天做事有精神一点，不要整天感觉累累的。"],
   [BatteryFull, "体力", "身体有力一点，做什么都没那么容易累。"],
-  [Moon, "夜尿", "晚上少被频繁起夜影响，睡得好，第二天精神也比较好。"],
-  [HeartPulse, "三高", "平时也关注血压、血糖、血脂，作为日常健康管理的辅助。"],
+  [Moon, "恢复", "平时把精神和体力顾好一点，忙完一天也别总觉得整个人被掏空。"],
+  [HeartPulse, "日常活力", "从平时开始补充男性日常所需，把精神、体力和整体状态一起顾起来。"],
 ] as const;
-function Benefits() { return <section id="benefits" className="section section-cream support-section"><div className="container"><div className="support-visual-head"><SectionHeading eyebrow="02 / WHAT BETTER MAN SUPPORTS" title={<>Better Man，<br/>帮你把男人的状态找回来。</>} desc={<>硬度不够、时间越来越短、精神体力跟不上，晚上还一直夜尿？<br/>别再一个一个烦，Better Man 通通帮你解决。</>}/><div className="support-person-image"><Image src="/images/lifestyle/daily-support.png" alt="成熟男性在办公室手持 Better Man 产品并比赞" width={1536} height={1024} loading="lazy" sizes="(max-width: 768px) calc(100vw - 40px), 52vw"/></div></div><div className="benefit-grid support-grid">{benefits.map(([Icon,label,desc], index) => <article className="benefit-item support-item" key={label}><span className="support-icon"><Icon size={23} strokeWidth={1.7}/></span><small>0{index + 1}</small><div><h3>{label}</h3><p>{desc}</p></div></article>)}</div><p className="support-callout">男人要顾的，<br/>从来不只是那几分钟。</p></div></section>; }
+function Benefits() { return <section id="benefits" className="section section-cream support-section"><div className="container"><div className="support-visual-head"><SectionHeading eyebrow="02 / WHAT BETTER MAN SUPPORTS" title={<>Better Man，<br/>帮你把男人的状态找回来。</>} desc={<>硬度不够、时间越来越短、精神体力跟不上？<br/>Better Man 从平时开始补充，把男人该顾的状态一起顾起来。</>}/><div className="support-person-image"><Image src="/images/lifestyle/daily-support.png" alt="成熟男性在办公室手持 Better Man 产品并比赞" width={1536} height={1024} loading="lazy" sizes="(max-width: 768px) calc(100vw - 40px), 52vw"/></div></div><div className="benefit-grid support-grid">{benefits.map(([Icon,label,desc], index) => <article className="benefit-item support-item" key={label}><span className="support-icon"><Icon size={23} strokeWidth={1.7}/></span><small>0{index + 1}</small><div><h3>{label}</h3><p>{desc}</p></div></article>)}</div><p className="support-callout">男人要顾的，<br/>从来不只是那几分钟。</p></div></section>; }
 
 const ingredientItems = [
   { number: "01", label: "CORE INGREDIENT", name: "红东革阿里", english: "RED TONGKAT ALI", image: "/images/ingredients/tongkat-ali.webp", highlight: "男性活力 · 日常精力 · 体力支持", description: "Better Man 的核心男性草本成分之一，用于支持男性日常活力、精力与体力状态。", tags: ["男性活力", "日常精力", "体力支持"], core: true },
