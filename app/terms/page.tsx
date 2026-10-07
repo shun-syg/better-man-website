@@ -6,4 +6,4 @@ export const metadata: Metadata = {
   description: "Better Man 网站使用条款与产品资讯说明。",
 };
 
-export default function Terms() { return <main className="legal-page container"><Link href="/">← 返回首页</Link><h1>使用条款</h1><p>本网站提供 Better Man 产品的一般资讯与日常保健参考，并非医疗建议、诊断或治疗用途。产品资料与配套请通过 WhatsApp 向我们确认。</p><p>顾客分享属于个人体验，实际感受可能因身体状态及生活习惯而异。如有健康相关疑问，请咨询专业医疗人员。正式上线前，请根据实际运营主体与适用地区法规完善本条款。</p></main>; }
+export default function Terms() { return <main className="legal-page container"><Link href="/">← 返回首页</Link><h1>使用条款</h1><p>本网站提供 Better Man 的一般产品、配方与食用方式资讯。本产品不是药物，网站内容并非医疗建议，也不用于诊断、治疗、治愈或预防任何疾病。</p><p>产品应按照包装标签及建议方式使用，不应自行增加食用量。营养补充不能替代均衡饮食、规律作息与适量运动。</p><p>如正在服药、接受治疗、患有健康问题，或对任何成分有疑问，请在使用前咨询医生或合格医疗专业人士。产品与配套资料可通过网站所列 WhatsApp 联系方式确认。</p></main>; }

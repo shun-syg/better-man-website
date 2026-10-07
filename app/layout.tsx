@@ -4,8 +4,8 @@ import { siteUrl } from "@/config/seo";
 import "./globals.css";
 import "./brand.css";
 
-const title = "Better Man 宝马糖 | 男性日常状态与活力保养";
-const description = "Better Man 宝马糖，以红东革阿里与黑玛卡为核心成分，为男性提供精神、体力、耐力与日常状态保养。每5天1颗，一盒14颗，简单方便。";
+const title = "Better Man | 成年男性日常营养补充";
+const description = "Better Man 男士日常营养补充，含红东革阿里、黑玛卡、锌与罗汉果。配方、产品资料与食用方式清楚透明。";
 const socialImage = siteUrl ? `${siteUrl}/images/hero/better-man-product.png` : undefined;
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Better Man",
     locale: "zh_SG",
     url: siteUrl,
-    images: socialImage ? [{ url: socialImage, width: 1254, height: 1254, alt: "Better Man 宝马糖产品盒与独立包装" }] : undefined,
+    images: socialImage ? [{ url: socialImage, width: 1254, height: 1254, alt: "Better Man 男士日常营养补充产品盒与独立包装" }] : undefined,
   },
   twitter: {
     card: "summary_large_image",
