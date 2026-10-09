@@ -207,7 +207,7 @@ body {
 .campaign-hero-image {
   z-index: 0;
   object-fit: cover;
-  object-position: 47% center;
+  object-position: 72% center;
 }
 
 .campaign-hero-shade {
@@ -230,14 +230,15 @@ body {
 .campaign-hero-copy .eyebrow {
   margin-bottom: 7px;
   color: #8fbdff;
+  font-size: 15px;
   font-weight: 700;
 }
 
 .campaign-hero-category {
   margin: 0 0 18px;
-  color: #c8dcff;
-  font-size: 18px;
-  font-weight: 650;
+  color: #e5c88f;
+  font-size: 20px;
+  font-weight: 750;
   letter-spacing: .04em;
 }
 
@@ -252,6 +253,7 @@ body {
 
 .campaign-hero-support {
   margin: 0;
+  max-width: 600px;
   color: rgba(255, 255, 255, .86);
   font-size: 17px;
   font-weight: 600;
@@ -285,7 +287,9 @@ body {
   object-fit: cover;
 }
 
-.benefits-visual { aspect-ratio: 3 / 2; }
+.benefits-visual { aspect-ratio: 11 / 5; }
+
+.benefits-visual img { object-position: center center; }
 
 .benefits-list {
   display: grid;
@@ -429,8 +433,30 @@ body {
 }
 
 .reviews-section .eyebrow {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   color: #9cc3ff;
+}
+
+.reviews-heading {
+  max-width: 820px;
+  margin-bottom: 26px;
+}
+
+.reviews-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(32px, 8vw, 44px);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 1.22;
+}
+
+.reviews-heading > p:not(.eyebrow) {
+  margin: 14px 0 0;
+  color: #cbdaf0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 .reviews-video-grid { display: grid; gap: 18px; }
@@ -699,15 +725,16 @@ body {
   .faq-section .eyebrow { font-size: 17px; letter-spacing: .14em; }
   .section-heading h2, .final-cta h2 { font-size: clamp(48px, 4.5vw, 64px); }
   .campaign-hero, .campaign-hero-inner { min-height: min(780px, calc(100svh - 80px)); }
-  .campaign-hero-image { object-position: center 56%; }
+  .campaign-hero-image { object-position: center center; }
   .campaign-hero-shade { background: linear-gradient(90deg, #031126ef 0%, #031126bb 35%, #03112635 67%, #03112619 100%); }
   .campaign-hero-inner { align-items: center; padding-block: 72px; }
   .campaign-hero-copy { width: 52%; }
+  .campaign-hero-copy .eyebrow { font-size: 18px; }
   .campaign-hero h1 { font-size: clamp(66px, 6vw, 90px); }
   .campaign-hero-support { font-size: 20px; }
-  .benefits-intro { display: grid; grid-template-columns: .82fr 1.18fr; gap: 70px; align-items: center; }
+  .benefits-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
   .benefits-intro .section-heading { margin: 0; }
-  .benefits-visual { aspect-ratio: 16 / 10; }
+  .benefits-visual { aspect-ratio: 11 / 5; }
   .benefits-list { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 28px; }
   .benefits-list article { min-height: 150px; }
   .ingredients-grid { gap: 26px; }
@@ -720,6 +747,8 @@ body {
   .use-facts strong { justify-content: center; min-height: 78px; padding: 12px; border-left: 0; border-top: 4px solid var(--brand-blue); text-align: center; font-size: 18px; }
   .reviews-video-grid { gap: 34px; }
   .reviews-video-grid figure { width: min(100%, 370px); }
+  .reviews-heading { margin-bottom: 34px; }
+  .reviews-heading h2 { font-size: 52px; }
   .review-disclaimer-new { margin-top: 32px; }
   .faq-layout-new { gap: clamp(70px, 8vw, 110px); }
   .faq-list summary { min-height: 80px; }

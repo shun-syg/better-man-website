@@ -5,7 +5,7 @@ import "./globals.css";
 import "./brand.css";
 
 const title = "Better Man | 成年男性日常营养补充";
-const description = "Better Man 男士日常营养补充，含红东革阿里、黑玛卡、锌与罗汉果。配方、产品资料与食用方式清楚透明。";
+const description = "Better Man 男士日常营养补充，含红东革阿里、黑玛卡、锌与罗汉果，配方、产品资料与食用方式清楚透明";
 const socialImage = siteUrl ? `${siteUrl}/images/hero/better-man-product.png` : undefined;
 
 export const metadata: Metadata = {
