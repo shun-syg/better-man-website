@@ -56,14 +56,14 @@ const benefitItems = [
 ];
 
 function Benefits() {
-  return <section id="benefits" className="section benefits-section"><div className="container"><div className="benefits-intro"><SectionHeading eyebrow="02 / BENEFITS · 功效" title={<>男人想要的，<br/>无非是更好的状态</>}/><div className="benefits-visual"><Image src="/images/lifestyle/intimate-bedroom.webp" alt="深蓝色卧室中身穿香槟色丝绸睡袍的成年亚洲女性" width={2056} height={765} loading="lazy" sizes="(max-width: 767px) calc(100vw - 36px), 55vw"/></div></div><div className="benefits-list">{benefitItems.map((item) => <article key={item.title}><item.icon size={23} strokeWidth={1.7} aria-hidden="true"/><div><h3>{item.title}</h3></div></article>)}</div></div></section>;
+  return <section id="benefits" className="section benefits-section"><div className="container"><div className="benefits-intro"><SectionHeading eyebrow="02 / BENEFITS · 功效" title={<>男人想要的，<br/>无非是更好的状态</>}/><div className="benefits-visual"><Image src="/images/lifestyle/better-man-office-product.png" alt="成年亚洲男性在办公室手持 Better Man 产品盒" width={1536} height={1024} loading="lazy" sizes="(max-width: 767px) calc(100vw - 36px), 55vw"/></div></div><div className="benefits-list">{benefitItems.map((item) => <article key={item.title}><item.icon size={23} strokeWidth={1.7} aria-hidden="true"/><div><h3>{item.title}</h3></div></article>)}</div></div></section>;
 }
 
 const ingredientItems = [
-  { name: "红东革阿里", english: "RED TONGKAT ALI", image: "/images/ingredients/tongkat-ali.webp", description: "传统男性草本，关注日常活力与状态" },
-  { name: "黑玛卡", english: "BLACK MACA", image: "/images/ingredients/black-maca.webp", description: "植物营养精华，为忙碌生活补充活力" },
-  { name: "锌", english: "ZINC", image: "/images/ingredients/zinc.webp", description: "男性重要营养元素，帮助维持正常生理机能" },
-  { name: "罗汉果", english: "MONK FRUIT", image: "/images/ingredients/monk-fruit.webp", description: "天然植物成分，让整体营养配方更丰富" },
+  { name: "红东革阿里", english: "RED TONGKAT ALI", image: "/images/ingredients/tongkat-ali.webp", description: "东南亚传统男性草本，精选植物原料" },
+  { name: "黑玛卡", english: "BLACK MACA", image: "/images/ingredients/black-maca.webp", description: "源自玛卡植物，丰富日常营养配方" },
+  { name: "锌", english: "ZINC", image: "/images/ingredients/zinc.webp", description: "人体必需微量元素，参与正常生理机能" },
+  { name: "罗汉果", english: "MONK FRUIT", image: "/images/ingredients/monk-fruit.webp", description: "天然植物来源，为配方增添多元成分" },
 ];
 
 function Ingredients() {
